@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PORTFOLIO | Web Engineer",
+  title: "Portfolio | TerappyLab!",
   description: "Webエンジニアのポートフォリオサイトです。制作物やスキルセットをまとめています。",
 };
 
