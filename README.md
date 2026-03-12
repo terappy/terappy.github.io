@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio | TerappyLab!
 
-## Getting Started
+<p align="center">
+  <img src="./public/assets/favicon_original.png" alt="TerappyLab Symbol" width="120" />
+</p>
 
-First, run the development server:
+[Terappy](https://github.com/terappy) のポートフォリオサイトソースコードです。
+
+## 概要
+
+最新のフロントエンド技術を用いて構築された、静的なシングルページアプリケーション（SPA）形式のポートフォリオサイトです。
+全体的にダークテーマとグラスモーフィズム（ガラスのような透け感のあるデザイン）を採用し、Framer Motion を用いてリッチで滑らかなアニメーションを実装しています。
+
+- **プレビュー**: [https://terappy.github.io](https://terappy.github.io)
+
+## 利用技術
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, React 19)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment & Hosting**: GitHub Pages (using GitHub Actions)
+
+## ローカルでの開発と起動
+
+Node.js（>= 18.x）がインストールされている環境で、以下のコマンドを実行してください。
 
 ```bash
+# パッケージのインストール
+npm install
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで `http://localhost:3000` を開くと動作確認が可能です。コード（`src/app/page.tsx` や各コンポーネント）を編集すると自動でリロードされます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ディレクトリ構成
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/`: Next.js のルーティング設定、全体のレイアウト (`layout.tsx`)、およびメインページ (`page.tsx`)。グローバルCSS (`globals.css`)。
+- `src/components/`: 各セクションのUIコンポーネント（Hero, AboutMe, Works, SkillSet, History, Header, Footer）。
+- `public/`: ファビコンなどの静的ファイル。生成AIで作成したオリジナルファビコン画像の元データ (`assets/favicon_original.png`) も含まれています。
+- `.github/workflows/`: GitHub Pages への自動デプロイ設定ファイル (`deploy.yml`)。
 
-## Learn More
+## デプロイメント
 
-To learn more about Next.js, take a look at the following resources:
+このリポジトリの `master` または `main` ブランチにコードをプッシュすると、GitHub Actions のワークフロー（`.github/workflows/deploy.yml`）が自動的に実行され、静的ファイルがビルドされた後に GitHub Pages へデプロイされます。手動ビルドや `gh-pages` コマンドラインツールによるデプロイは不要です。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## アセット
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ファビコンに使用しているリスのイラストの元画像は `public/assets/favicon_original.png` に保管されています（生成AIにて作成）。
+- アイコンには Lucide React を使用しています。
